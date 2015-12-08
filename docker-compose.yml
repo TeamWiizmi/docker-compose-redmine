@@ -1,0 +1,9 @@
+redmine:
+  build: .
+  container_name: redmine
+  restart: always
+  volumes:
+    - 'redmine_files:/usr/src/redmine/files'
+  external_links:
+    - 'postgres'
+  env_file: .env.production
